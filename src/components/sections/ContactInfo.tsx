@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Phone, Mail, ExternalLink } from "lucide-react"
+import { Calendar, Clock, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ContactInfo(): JSX.Element {
@@ -34,7 +34,7 @@ export function ContactInfo(): JSX.Element {
             {/* Lista de contatos */}
             <div className="space-y-5">
                 {contactItems.map((item, index) => (
-                    <div 
+                    <div
                         key={index}
                         className="flex gap-3 items-start"
                     >
@@ -58,7 +58,7 @@ export function ContactInfo(): JSX.Element {
 
             {/* Botão de agendamento */}
             <div className="pt-2">
-                <Button 
+                <Button
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
                 >
                     <Calendar className="w-4 h-4 mr-2" />

@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ContactFormData } from "@/types"
-import { Send, Loader2 } from "lucide-react"
+import { Send, Loader2, AlertTriangle } from "lucide-react"
 
 export function ContactForm(): JSX.Element {
     const [formData, setFormData] = useState<ContactFormData>({
@@ -17,15 +17,26 @@ export function ContactForm(): JSX.Element {
 
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+    const [errorMessage, setErrorMessage] = useState<string>("")
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setIsSubmitting(true)
         setSubmitStatus('idle')
+        setErrorMessage("")
 
         try {
             // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000))
+            await new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // Simulando um erro aleatório para teste
+                    if (Math.random() > 0.5) {
+                        reject(new Error("Falha na conexão com o servidor"))
+                    }
+                    resolve(true)
+                }, 2000)
+            })
+
             setSubmitStatus('success')
             // Reset form after success
             setFormData({
@@ -35,8 +46,13 @@ export function ContactForm(): JSX.Element {
                 message: "",
                 subject: ""
             })
-        } catch (error) {
+        } catch (error: unknown) {
             setSubmitStatus('error')
+            if (error instanceof Error) {
+                setErrorMessage(error.message)
+            } else {
+                setErrorMessage("Ocorreu um erro inesperado. Tente novamente mais tarde.")
+            }
         } finally {
             setIsSubmitting(false)
         }
@@ -117,13 +133,15 @@ export function ContactForm(): JSX.Element {
 
                 {/* Status messages */}
                 {submitStatus === 'success' && (
-                    <div className="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-lg text-sm">
+                    <div className="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-lg text-sm flex items-center">
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2" />
                         Mensagem enviada com sucesso! Retornaremos em breve.
                     </div>
                 )}
                 {submitStatus === 'error' && (
-                    <div className="bg-red-50 text-red-700 px-4 py-2 rounded-lg text-sm">
-                        Erro ao enviar mensagem. Por favor, tente novamente.
+                    <div className="bg-red-50 text-red-700 px-4 py-2 rounded-lg text-sm flex items-center">
+                        <AlertTriangle className="w-4 h-4 mr-2" />
+                        {errorMessage || "Erro ao enviar mensagem. Por favor, tente novamente."}
                     </div>
                 )}
 

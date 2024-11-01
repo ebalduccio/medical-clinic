@@ -1,6 +1,6 @@
 import { ContactForm } from "./ContactForm"
 import { ContactInfo } from "./ContactInfo"
-import { MessageSquare, MapPin, Clock, Phone, Mail, Calendar, Stethoscope } from "lucide-react"
+import { MessageSquare, MapPin, Clock, Phone } from "lucide-react"
 
 
 
