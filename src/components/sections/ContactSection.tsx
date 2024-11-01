@@ -1,8 +1,42 @@
 import { ContactForm } from "./ContactForm"
 import { ContactInfo } from "./ContactInfo"
-import { MessageSquare, MapPin, Clock, Phone } from "lucide-react"
+import { MessageSquare, MapPin, Clock, Phone, Mail, Calendar, Stethoscope } from "lucide-react"
+
+
 
 export function ContactSection(): JSX.Element {
+
+    const LocationMap = () => {
+        return (
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-emerald-100">
+                {/* Overlay superior com gradiente */}
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-emerald-50 to-transparent z-10" />
+
+                {/* Indicador de localização fixo */}
+                <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-sm py-2 px-3 rounded-full shadow-md">
+                    <MapPin className="w-4 h-4 text-emerald-600" />
+                    <span className="text-sm font-medium text-emerald-900">Nossa Localização</span>
+                </div>
+
+                {/* Iframe do Google Maps */}
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975483517286!2d-46.65439492375812!3d-23.56334017875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1682181415068!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="grayscale hover:grayscale-0 transition-all duration-300"
+                />
+
+                {/* Overlay inferior com gradiente */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-emerald-50 to-transparent z-10" />
+            </div>
+        )
+    }
+
+
     return (
         <section className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-emerald-50 to-white">
             {/* Elementos decorativos de background */}
@@ -73,10 +107,8 @@ export function ContactSection(): JSX.Element {
                             </div>
 
                             {/* Mapa */}
-                            <div className="relative h-[300px] rounded-2xl overflow-hidden bg-emerald-50">
-                                <div className="absolute inset-0 bg-emerald-100/50 flex items-center justify-center">
-                                    <p className="text-emerald-700 font-medium">Mapa da Localização</p>
-                                </div>
+                            <div className="mb-12 h-[400px] rounded-2xl overflow-hidden shadow-lg">
+                                <LocationMap />
                             </div>
                         </div>
 
