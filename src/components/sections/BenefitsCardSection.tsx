@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import {
     CreditCard,
     Percent,
     Clock,
     Users,
-    Calendar,
     PiggyBank,
     Heart,
     Gift

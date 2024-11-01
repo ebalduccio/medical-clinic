@@ -8,7 +8,6 @@ import {
     Phone,
     Mail,
     MapPin,
-    ArrowUp
 } from "lucide-react"
 
 export function Footer(): JSX.Element {
