@@ -58,14 +58,30 @@ function HeroSection() {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-8 pt-8 border-t border-emerald-100">
-                            {stats.map((stat) => (
-                                <div key={stat.label} className="space-y-2 bg-white/60 backdrop-blur-sm rounded-lg p-4">
-                                    <div className="flex items-center space-x-2">
-                                        <stat.icon className="w-5 h-5 text-emerald-600" />
-                                        <span className="text-2xl font-bold text-emerald-900">{stat.value}</span>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-emerald-100">
+                            {stats.map((stat, index) => (
+                                <div
+                                    key={stat.label}
+                                    className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 border border-emerald-50"
+                                >
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-teal-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+
+                                    <div className="flex items-start space-x-4">
+                                        <div className="p-3 rounded-lg bg-emerald-50 group-hover:bg-emerald-100 transition-colors">
+                                            <stat.icon className="w-6 h-6 text-emerald-600" />
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            <div className="flex flex-col">
+                                                <span className="text-3xl font-bold text-emerald-900 group-hover:text-emerald-700 transition-colors">
+                                                    {stat.value}
+                                                </span>
+                                                <span className="text-sm font-medium text-emerald-600">
+                                                    {stat.label}
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p className="text-sm text-emerald-600">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
