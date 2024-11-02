@@ -59,7 +59,7 @@ function HeroSection() {
 
                         {/* Stats */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-emerald-100">
-                            {stats.map((stat, index) => (
+                            {stats.map((stat) => (
                                 <div
                                     key={stat.label}
                                     className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 border border-emerald-50"
