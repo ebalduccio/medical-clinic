@@ -6,26 +6,26 @@ export function ContactInfo(): JSX.Element {
         {
             icon: <MapPin className="w-5 h-5 text-emerald-600" />,
             title: "Nosso Endereço",
-            content: "Rua da Saúde, 123",
-            details: "Jardim Médico - São Paulo/SP"
+            content: "Rua Alceu Amoroso Lima 805A Loja 04",
+            details: "Centro Médico Iguatemi - Caminho das Árvores - Salvador/BA"
         },
         {
             icon: <Phone className="w-5 h-5 text-emerald-600" />,
             title: "Telefone Principal",
-            content: "(11) 9999-9999",
-            details: "WhatsApp disponível"
+            content: "(71) 99922-0044",
+            details: "WhatsApp e ligações"
         },
         {
             icon: <Mail className="w-5 h-5 text-emerald-600" />,
             title: "E-mail",
-            content: "contato@clinica.com",
+            content: "contato@amodonto.com.br",
             details: "Resposta em até 24h"
         },
         {
             icon: <Clock className="w-5 h-5 text-emerald-600" />,
             title: "Horário de Atendimento",
-            content: "Segunda à Sexta: 8h às 20h",
-            details: "Sábado: 8h às 14h"
+            content: "Segunda à Sexta: 9h às 18h",
+            details: "Sábado: 9h às 13h"
         }
     ]
 
@@ -66,7 +66,7 @@ export function ContactInfo(): JSX.Element {
                 </Button>
             </div>
 
-            {/* Aviso de emergência */}
+            {/* Aviso de atendimento emergencial */}
             <div className="bg-emerald-50/50 backdrop-blur-sm rounded-lg p-4 border border-emerald-100">
                 <div className="flex items-start gap-3">
                     <div className="rounded-full p-2 bg-emerald-100/50">
@@ -74,13 +74,13 @@ export function ContactInfo(): JSX.Element {
                     </div>
                     <div>
                         <p className="font-medium text-emerald-800">
-                            Emergência 24h
+                            Atendimento Prioritário
                         </p>
                         <p className="text-emerald-900 font-medium">
-                            (11) 8888-8888
+                            (71) 98888-8888
                         </p>
                         <p className="text-sm text-emerald-600">
-                            Atendimento urgente
+                            Para emergências odontológicas
                         </p>
                     </div>
                 </div>

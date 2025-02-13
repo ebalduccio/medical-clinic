@@ -1,6 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { BenefitsCardSection } from "@/components/sections/BenefitsCardSection";
+// import { BenefitsCardSection } from "@/components/sections/BenefitsCardSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import HeroSection from "@/components/sections/HeroSection";
 import { ServicesSection } from "@/components/sections/ServiceSection";
@@ -13,7 +13,7 @@ export default function HomePage(): JSX.Element {
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
-        <BenefitsCardSection />
+        {/* <BenefitsCardSection /> */}
         <WhyChooseUsSection />
         <ContactSection />
       </main>

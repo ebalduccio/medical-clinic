@@ -16,7 +16,7 @@ export function Header(): JSX.Element {
     const navigation = [
         { name: "Início", href: "#" },
         { name: "Serviços", href: "#" },
-        { name: "Médicos", href: "#" },
+        { name: "Profissionais", href: "#" },
         { name: "Sobre", href: "#" },
         { name: "Contato", href: "#" },
     ]
@@ -34,7 +34,7 @@ export function Header(): JSX.Element {
                             <div className="relative h-10 w-10 bg-emerald-100 rounded-lg overflow-hidden">
                                 <Image
                                     src="/logo.png"
-                                    alt="HealthCare Clinic Logo"
+                                    alt="Amodonto Logo"
                                     className="h-10 w-10 object-cover transition-transform opacity-60 group-hover:scale-110"
                                     height={40}
                                     width={40}
@@ -42,9 +42,9 @@ export function Header(): JSX.Element {
                             </div>
                             <div className="ml-3 flex flex-col">
                                 <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
-                                    HealthCare Clinic
+                                    Amodonto
                                 </span>
-                                <span className="text-xs text-emerald-600 font-medium">Cuidando de você</span>
+                                <span className="text-xs text-emerald-600 font-medium">Medicina Orofacial</span>
                             </div>
                         </Link>
 
@@ -69,17 +69,17 @@ export function Header(): JSX.Element {
                                 className="text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50"
                             >
                                 <Phone className="h-4 w-4 mr-2" />
-                                (11) 9999-9999
+                                (71) 99922-0044
                             </Button>
                             <Button
                                 className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-200"
                             >
-                                Agendar Consulta
+                                Agendar Avaliação
                             </Button>
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <button 
+                        <button
                             className="p-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 md:hidden"
                             onClick={toggleMobileMenu}
                             aria-expanded={isMobileMenuOpen}
@@ -108,9 +108,8 @@ export function Header(): JSX.Element {
 
                 {/* Mobile Navigation Menu */}
                 <div
-                    className={`absolute top-full left-0 right-0 bg-white md:hidden transform transition-all duration-300 ease-in-out ${
-                        isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-2 opacity-0 invisible"
-                    }`}
+                    className={`absolute top-full left-0 right-0 bg-white md:hidden transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-2 opacity-0 invisible"
+                        }`}
                 >
                     <div className="container mx-auto">
                         <div className="divide-y divide-gray-100">
@@ -126,29 +125,29 @@ export function Header(): JSX.Element {
                                     </Link>
                                 ))}
                             </nav>
-                            
+
                             <div className="py-6 px-4 space-y-3">
                                 <Button
                                     variant="ghost"
                                     className="w-full justify-center text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50"
                                 >
                                     <Phone className="h-4 w-4 mr-2" />
-                                    (11) 9999-9999
+                                    (71) 99922-0044
                                 </Button>
                                 <Button
                                     className="w-full justify-center bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-200"
                                 >
-                                    Agendar Consulta
+                                    Agendar Avaliação
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            
+
             {/* Overlay for mobile menu */}
             {isMobileMenuOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
                     onClick={() => setIsMobileMenuOpen(false)}
                     aria-hidden="true"

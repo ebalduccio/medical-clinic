@@ -5,9 +5,8 @@ import { Heart, Calendar, Phone, ChevronRight, Clock, MapPin, Users } from "luci
 
 function HeroSection() {
     const stats = [
-        { icon: Users, label: "Pacientes Atendidos", value: "10,000+" },
-        { icon: Clock, label: "Anos de Experiência", value: "25+" },
-        { icon: MapPin, label: "Localidades", value: "3" }
+        { icon: Users, label: "Pacientes Atendidos", value: "5,000+" },
+        { icon: Clock, label: "Anos de Experiência", value: "15+" },
     ];
 
     return (
@@ -15,7 +14,7 @@ function HeroSection() {
             {/* Background Image with Next.js Image component */}
             <div className="absolute inset-0 -z-20">
                 <Image
-                    src="/hero.jpg"
+                    src="/hero1.jpg"
                     alt="Medical background"
                     fill
                     priority
@@ -34,15 +33,15 @@ function HeroSection() {
                     <div className="flex flex-col space-y-8">
                         <div className="inline-flex items-center space-x-2 bg-emerald-50/80 backdrop-blur-sm rounded-full px-4 py-1.5 w-fit">
                             <Heart className="w-4 h-4 text-emerald-600" />
-                            <span className="text-sm font-medium text-emerald-600">Cuidando da sua saúde</span>
+                            <span className="text-sm font-medium text-emerald-600">Medicina Orofacial</span>
                         </div>
 
                         <div className="space-y-4">
                             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
-                                Transformando Vidas com Cuidados de Excelência
+                                Seu Sorriso Perfeito Começa na Amodonto
                             </h1>
                             <p className="max-w-[600px] text-emerald-800 md:text-xl backdrop-blur-sm bg-white/30 rounded-lg p-4">
-                                Combinamos tecnologia avançada e atendimento humanizado para oferecer o melhor cuidado para você e sua família.
+                                Especialistas em implantes, harmonização facial, lentes de contato e tecnologia Invisalign para transformar seu sorriso.
                             </p>
                         </div>
 
@@ -91,29 +90,29 @@ function HeroSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
                             {
-                                title: "Atendimento 24/7",
-                                description: "Suporte médico disponível a qualquer momento para emergências",
+                                title: "Implante Dentário",
+                                description: "Recupere sua confiança com implantes duradouros e naturais",
                                 icon: Clock,
                                 color: "bg-emerald-50/80",
                                 iconColor: "text-emerald-600"
                             },
                             {
-                                title: "Especialistas Renomados",
-                                description: "Equipe médica altamente qualificada e experiente",
+                                title: "Lentes de Contato",
+                                description: "Transforme seu sorriso com lentes de contato personalizadas",
                                 icon: Users,
                                 color: "bg-teal-50/80",
                                 iconColor: "text-teal-600"
                             },
                             {
-                                title: "Tecnologia Avançada",
-                                description: "Equipamentos de última geração para diagnósticos precisos",
+                                title: "Harmonização",
+                                description: "Harmonização facial para realçar sua beleza natural",
                                 icon: ChevronRight,
                                 color: "bg-green-50/80",
                                 iconColor: "text-green-600"
                             },
                             {
-                                title: "Localização Privilegiada",
-                                description: "Fácil acesso com estacionamento gratuito",
+                                title: "Invisalign",
+                                description: "Alinhamento dentário discreto e eficiente",
                                 icon: MapPin,
                                 color: "bg-emerald-50/80",
                                 iconColor: "text-emerald-600"

@@ -1,11 +1,8 @@
 import { ContactForm } from "./ContactForm"
 import { ContactInfo } from "./ContactInfo"
-import { MessageSquare, MapPin, Clock, Phone } from "lucide-react"
-
-
+import { MessageSquare, MapPin } from "lucide-react"
 
 export function ContactSection(): JSX.Element {
-
     const LocationMap = () => {
         return (
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-emerald-100">
@@ -15,12 +12,12 @@ export function ContactSection(): JSX.Element {
                 {/* Indicador de localização fixo */}
                 <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-sm py-2 px-3 rounded-full shadow-md">
                     <MapPin className="w-4 h-4 text-emerald-600" />
-                    <span className="text-sm font-medium text-emerald-900">Nossa Localização</span>
+                    <span className="text-sm font-medium text-emerald-900">Amodonto</span>
                 </div>
 
                 {/* Iframe do Google Maps */}
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975483517286!2d-46.65439492375812!3d-23.56334017875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1682181415068!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8282394509477!2d-38.45699542394614!3d-12.981733059826095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b19f0e40af7%3A0x84f5c3e31a1f5a7!2sR.%20Alceu%20Amoroso%20Lima%2C%20805%20-%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-770!5e0!3m2!1spt-BR!2sbr!4v1707957542612!5m2!1spt-BR!2sbr"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -35,7 +32,6 @@ export function ContactSection(): JSX.Element {
             </div>
         )
     }
-
 
     return (
         <section className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-emerald-50 to-white">
@@ -54,27 +50,27 @@ export function ContactSection(): JSX.Element {
                 <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
                     <div className="inline-flex items-center rounded-full px-4 py-1.5 bg-emerald-100/60 backdrop-blur-sm">
                         <MessageSquare className="w-5 h-5 text-emerald-600 mr-2" />
-                        <span className="text-sm font-medium text-emerald-700">Fale Conosco</span>
+                        <span className="text-sm font-medium text-emerald-700">Entre em Contato</span>
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
-                            Como Podemos Ajudar?
+                            Agende sua Consulta
                         </span>
                     </h2>
                     <p className="text-lg text-emerald-700 max-w-[600px] mx-auto">
-                        Estamos sempre prontos para atender você da melhor forma possível.
+                        Estamos prontos para transformar seu sorriso. Entre em contato e marque sua avaliação.
                     </p>
                 </div>
 
                 {/* Grid de informações rápidas */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+                {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
                     <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-emerald-100 hover:bg-white/80 transition-colors">
                         <div className="rounded-full p-3 bg-emerald-100">
                             <Phone className="w-6 h-6 text-emerald-600" />
                         </div>
                         <div>
                             <h3 className="font-semibold text-emerald-900">Telefone</h3>
-                            <p className="text-emerald-600">(11) 9999-9999</p>
+                            <p className="text-emerald-600">(71) 99922-0044</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-emerald-100 hover:bg-white/80 transition-colors">
@@ -83,7 +79,7 @@ export function ContactSection(): JSX.Element {
                         </div>
                         <div>
                             <h3 className="font-semibold text-emerald-900">Endereço</h3>
-                            <p className="text-emerald-600">Rua da Saúde, 123</p>
+                            <p className="text-emerald-600">Caminho das Árvores - Salvador</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-emerald-100 hover:bg-white/80 transition-colors sm:col-span-2 lg:col-span-1">
@@ -92,10 +88,10 @@ export function ContactSection(): JSX.Element {
                         </div>
                         <div>
                             <h3 className="font-semibold text-emerald-900">Horário</h3>
-                            <p className="text-emerald-600">Seg-Sex: 8h às 20h</p>
+                            <p className="text-emerald-600">Seg-Sex: 9h às 18h</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Container principal de contato */}
                 <div className="max-w-6xl mx-auto">
@@ -116,10 +112,10 @@ export function ContactSection(): JSX.Element {
                         <div className="lg:col-span-3 bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-emerald-100 shadow-lg">
                             <div className="space-y-4">
                                 <h3 className="text-2xl font-bold text-emerald-900">
-                                    Envie sua Mensagem
+                                    Marque sua Avaliação
                                 </h3>
                                 <p className="text-emerald-600">
-                                    Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível.
+                                    Preencha o formulário abaixo e nossa equipe entrará em contato para agendar sua consulta.
                                 </p>
                             </div>
                             <div className="mt-8">

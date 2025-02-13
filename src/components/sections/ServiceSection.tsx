@@ -1,85 +1,67 @@
 import { ServiceProps } from "@/types"
 import {
-    Heart,
-    Brain,
-    Baby,
-    Bone,
-    Microscope,
-    Stethoscope,
-    Activity,
-    Syringe
+    Star,
+    Smile,
+    Sparkles,
+    ShieldCheck,
+    Lamp,
+    Heart
 } from "lucide-react"
 import Image from "next/image"
 
 export function ServicesSection(): JSX.Element {
     const services: ServiceProps[] = [
         {
+            icon: <Star className="w-8 h-8 text-emerald-600" />,
+            title: "Implante",
+            description: "Recupere sua confiança e sorriso com implantes dentários duradouros e naturais.",
+            features: ["Implantes unitários", "Implantes múltiplos", "Prótese sobre implante"]
+        },
+        {
+            icon: <Smile className="w-8 h-8 text-emerald-600" />,
+            title: "Invisalign e Alinhadores",
+            description: "Alinhe seus dentes de forma discreta e eficiente com tecnologia de ponta.",
+            features: ["Invisalign", "Alinhadores transparentes", "Correção ortodôntica"]
+        },
+        {
+            icon: <Sparkles className="w-8 h-8 text-emerald-600" />,
+            title: "Harmonização Orofacial",
+            description: "Transforme seu sorriso e realce sua beleza natural com procedimentos personalizados.",
+            features: ["Preenchimento labial", "Toxina botulínica", "Design do sorriso"]
+        },
+        {
+            icon: <ShieldCheck className="w-8 h-8 text-emerald-600" />,
+            title: "Prevenção",
+            description: "Mantenha sua saúde bucal em dia com cuidados preventivos especializados.",
+            features: ["Limpeza profissional", "Avaliação periodontal", "Orientação de higiene"]
+        },
+        {
+            icon: <Lamp className="w-8 h-8 text-emerald-600" />,
+            title: "Lentes de Contato",
+            description: "Transforme seu sorriso com lentes de contato dentais personalizadas e naturais.",
+            features: ["Facetas em porcelana", "Design digital", "Clareamento dental"]
+        },
+        {
             icon: <Heart className="w-8 h-8 text-emerald-600" />,
-            title: "Clínica Geral",
-            description: "Atendimento completo para toda a família com profissionais especializados.",
-            features: ["Consultas de rotina", "Check-up completo", "Prevenção de doenças"]
-        },
-        {
-            icon: <Brain className="w-8 h-8 text-emerald-600" />,
-            title: "Neurologia",
-            description: "Diagnóstico e tratamento especializado para condições neurológicas.",
-            features: ["Avaliação cognitiva", "Tratamento de enxaqueca", "Distúrbios do sono"]
-        },
-        {
-            icon: <Baby className="w-8 h-8 text-emerald-600" />,
-            title: "Pediatria",
-            description: "Cuidados especializados para a saúde e desenvolvimento das crianças.",
-            features: ["Acompanhamento do crescimento", "Vacinação", "Orientação nutricional"]
-        },
-        {
-            icon: <Bone className="w-8 h-8 text-emerald-600" />,
-            title: "Ortopedia",
-            description: "Tratamento especializado para problemas musculoesqueléticos.",
-            features: ["Fisioterapia", "Reabilitação", "Tratamento de lesões"]
-        },
-        {
-            icon: <Microscope className="w-8 h-8 text-emerald-600" />,
-            title: "Exames",
-            description: "Laboratório completo com resultados rápidos e precisos.",
-            features: ["Exames de sangue", "Diagnóstico por imagem", "Testes especializados"]
-        },
-        {
-            icon: <Stethoscope className="w-8 h-8 text-emerald-600" />,
-            title: "Cardiologia",
-            description: "Avaliação e tratamento completo para saúde cardíaca.",
-            features: ["Eletrocardiograma", "Holter", "Check-up cardíaco"]
-        },
-        {
-            icon: <Activity className="w-8 h-8 text-emerald-600" />,
-            title: "Emergência",
-            description: "Atendimento de urgência 24 horas com equipe especializada.",
-            features: ["Pronto atendimento", "UTI móvel", "Emergências"]
-        },
-        {
-            icon: <Syringe className="w-8 h-8 text-emerald-600" />,
-            title: "Farmácia",
-            description: "Medicamentos e produtos de saúde com orientação farmacêutica.",
-            features: ["Medicamentos", "Produtos de saúde", "Orientação especializada"]
+            title: "Tratamento de Canal",
+            description: "Tratamento especializado para eliminar a dor e preservar seus dentes naturais.",
+            features: ["Endodontia moderna", "Tratamento sem dor", "Recuperação dental"]
         }
     ]
 
-    // Rest of the component remains the same
     return (
         <section className="relative w-full min-h-screen flex flex-col lg:flex-row">
-            {/* Imagem de fundo cobrindo metade da tela */}
             <div className="relative w-full lg:w-1/2 h-[300px] lg:h-auto lg:sticky lg:top-0">
                 <Image
-                    src="/services.jpg" // Uma imagem moderna de ambiente médico
-                    alt="Ambiente médico moderno"
+                    src="/services.jpg"
+                    alt="Consultório odontológico moderno"
                     fill
                     priority
                     className="object-cover"
                 />
-                {/* Overlay gradiente */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 to-emerald-900/40" />
             </div>
 
-            {/* Conteúdo dos serviços */}
             <div className="w-full lg:w-1/2 lg:ml-auto bg-white">
                 <div className="px-4 md:px-12 py-16 md:py-24">
                     <div className="max-w-2xl mx-auto">
@@ -88,7 +70,7 @@ export function ServicesSection(): JSX.Element {
                                 Nossos Serviços
                             </h2>
                             <p className="text-lg text-emerald-700">
-                                Oferecemos uma ampla gama de serviços médicos com profissionais altamente qualificados
+                                Oferecemos tratamentos odontológicos avançados com profissionais especializados para transformar seu sorriso
                             </p>
                         </div>
 

@@ -1,26 +1,26 @@
-import { Award, UserCheck, Building2, Heart, GitGraph } from "lucide-react"
+import { Award, UserCheck, Building2, Heart, ShieldCheck } from "lucide-react"
 
 export function WhyChooseUsSection(): JSX.Element {
     const benefits = [
         {
             icon: <UserCheck className="w-8 h-8 text-emerald-600" />,
-            title: "Médicos Experientes",
-            description: "Equipe altamente qualificada com anos de experiência"
+            title: "Profissionais Especializados",
+            description: "Equipe altamente qualificada com formação especializada em medicina orofacial"
         },
         {
             icon: <Building2 className="w-8 h-8 text-emerald-600" />,
-            title: "Instalações Modernas",
-            description: "Tecnologia de ponta para os melhores tratamentos"
+            title: "Tecnologia Avançada",
+            description: "Equipamentos de última geração e técnicas modernas para resultados superiores"
         },
         {
             icon: <Heart className="w-8 h-8 text-emerald-600" />,
-            title: "Cuidado Humanizado",
-            description: "Atendimento personalizado focado em suas necessidades"
+            title: "Atendimento Personalizado",
+            description: "Tratamento individualizado com foco nas suas necessidades e objetivos"
         },
         {
-            icon: <GitGraph className="w-8 h-8 text-emerald-600" />,
-            title: "Serviços Acessíveis",
-            description: "Excelente custo-benefício em todos os tratamentos"
+            icon: <ShieldCheck className="w-8 h-8 text-emerald-600" />,
+            title: "Excelência Comprovada",
+            description: "Anos de experiência e milhares de sorrisos transformados com sucesso"
         }
     ]
 
@@ -39,19 +39,19 @@ export function WhyChooseUsSection(): JSX.Element {
                         {/* Badge */}
                         <div className="inline-flex items-center rounded-full px-4 py-1.5 bg-emerald-100/60 backdrop-blur-sm">
                             <Award className="w-5 h-5 text-emerald-600 mr-2" />
-                            <span className="text-sm font-medium text-emerald-700">Referência em Saúde</span>
+                            <span className="text-sm font-medium text-emerald-700">Referência em Odontologia</span>
                         </div>
 
                         <div className="space-y-4">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
-                                    Por que nos escolher?
+                                    Por que escolher a Amodonto?
                                 </span>
                             </h2>
                             <p className="max-w-[600px] text-lg text-emerald-700 md:text-xl/relaxed">
-                                Na HealthCare Clinic, estamos comprometidos em proporcionar um cuidado excepcional com um toque pessoal.
-                                Nossa equipe de profissionais experientes utiliza as mais recentes tecnologias médicas para garantir o
-                                melhor tratamento possível.
+                                Na Amodonto, combinamos expertise profissional, tecnologia de ponta e atendimento humanizado
+                                para proporcionar os melhores tratamentos odontológicos. Nossa missão é transformar sorrisos
+                                e vidas com excelência e dedicação.
                             </p>
                         </div>
                     </div>
